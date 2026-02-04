@@ -33,12 +33,15 @@
     button:active{ transform: scale(0.98); }
     #yes{ background:#ff3b7a; color:white; }
     #no{
-      background:#2b2b2b; color:white;
+      background:#2b2b2b;
+      color:white;
       position: absolute;
-      left: 50%; top: 65%;
+      left: 58%;
+      top: 50%;
       transform: translate(-50%, -50%);
       user-select:none;
     }
+
     .hearts{
       position: fixed;
       inset: 0;
@@ -71,11 +74,11 @@
   <div class="card" id="card">
     <h1>Will you be my Valentine? 💘</h1>
     <p>Choose wisely 😌</p>
-
-    <div class="btns">
-      <button id="yes">Yes 💖</button>
-      <button id="no">No 😭</button>
-    </div>
+    
+  <div class="btns" style="position: relative; height: 90px;">
+    <button id="yes">Yes 💖</button>
+    <button id="no">No 😭</button>
+  </div>
   </div>
 
   <div class="popup" id="popup">
@@ -136,12 +139,6 @@
       if (e.target === popup) popup.style.display = "none";
     });
 
-    window.addEventListener("load", () => {
-      const cardRect = card.getBoundingClientRect();
-      noBtn.style.left = `${cardRect.width * 0.58}px`;
-      noBtn.style.top  = `${cardRect.height * 0.68}px`;
-      noBtn.style.transform = `translate(0,0)`;
-    });
   </script>
 </body>
 </html>

@@ -210,7 +210,7 @@
       const bx = r.left + r.width / 2;
       const by = r.top  + r.height / 2;
       const dist = Math.hypot(e.clientX - bx, e.clientY - by);
-      if (dist < 125) moveNoButton();
+      if (dist < 70) moveNoButton();
     });
 
     // Also run away on hover/tap attempt
